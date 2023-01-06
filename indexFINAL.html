@@ -1,0 +1,31 @@
+<!DOCTYPE html> <!-- deklaracja pliku html, informacja dla przeglądarki o typu pliku -->
+<html lang="pl-PL"> <!-- pl-deklaracja języka, PL-deklaracja kraju, w którym się tego języka używa -->
+<head>
+    <meta charset="UTF-8"> <!-- ustawienie systemu kodowania na UTF-8 -->
+    <meta name="description" content="Projekt grupowy, Elektroniczna Wymiana Danych"> <!-- krótki opis strony -->
+    <meta name="author" content="Szczepan Bryczek, Wojtek Pich, Aleksandra Zięba"> <!-- autorzy strony -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"> <!-- ustawienie viewportu tak, żeby strona wyświetlała się dobrze na każdym urządzeniu -->
+    <title>EDI PROJEKT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> <!-- dołączenie bootstrapa poprzez CDN -->
+</head>
+<body>
+    <h1 class="text-center">STATYSTYKI ZE STREAMÓW</h1>
+    <div class="container"> <!-- bootstrapowa klasa container ustawia na stronie dynamiczne marginesy, tag div definiuje wybraną sekcję strony -->
+    <table class="table table-bordered"> <!-- bootstrapowa klasa table-bordered ustawia ramki oddzielające kolumny -->
+        <thead class="table-dark"> <!-- bootstrapowa klasa table-dark ustawia ciemny pasek na górze tabeli -->
+          <tr> <!-- definiuje wiersz tabeli -->
+            <th scope="col">Kanał</th> <!-- th-nazwy komórek nagłówków -->
+            <th scope="col">Średnia widzów</th>
+            <th scope="col">Liczba subskrybentów</th>
+            <th scope="col">Liczba obserwujących</th>
+            <th scope="col">Rekord widzów</th>
+            <th scope="col">Ostatni raz na żywo</th>
+          </tr>
+        </thead>
+        <tbody id="api_table"> <!-- ustawiamy id, żeby móc wziąć dane poprzez getElementById z js -->
+        </tbody>
+      </table>
+    </div>
+    <script src="scriptFINAL.js"></script> <!-- zaembedowanie pliku js do htmla -->
+</body>
+</html>
