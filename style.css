@@ -1,59 +1,99 @@
 body {
-    background-color: rgb(54, 162, 235, 1);
+    background-color: #73b4dff6;
+    border: 30px solid #364db1;
+    border-radius: 60px;
+    padding: 20px;
 }
+
 
 table {
     background-color: silver;
-    border: 4px;
+    border: 1px;
     border-color: black;
-    overflow-y: scroll;
 }
+
+th,td {
+    text-align: center;
+    padding: 5px;
+    font-family: Montserrat;
+}
+
 
 h2 {
     text-align: center;
     font-size: 25px;
+    text-transform: uppercase;
+    font-family: Montserrat;
 }
 
 p {
     text-align: center;
     font-size: 20px;
+    text-transform: uppercase;
+    font-family: Montserrat;
 }
 
 .nav {
     
-    color: rgb(25, 28, 230);
+    color: rgb(8, 9, 85);
     text-align: center;
     font-size: 20px;
+    text-transform: uppercase;
+    font-family: Montserrat;
   }
 
 h1 {
     text-align: center;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-weight: bold; 
 }
 
 
-.chartMenu {
-    width: 100vw;
+ .chartMenu {
+    width: 100%;
     height: 40px;
-    background: #1A1A1A;
-    color: rgba(54, 162, 235, 1);
-}
-.chartMenu p {
-    padding: 10px;
-    font-size: 20px;
-}
-.chartCard {
-    width: 100vw;
-    height: calc(100vh - 40px);
-    background: rgba(54, 162, 235, 0.2);
+    background: #364db1;
+    color: black;
+    text-transform: uppercase;
+    font-family: Montserrat;
+
+} 
+
+.chartCardF {
+    width: 100%;
+    height: 600px;
+    background: rgba(54, 162, 235, 1);
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.chartBox {
-    width: 700px;
+} 
+
+.chartBoxF {
+    width: 900px;
     padding: 20px;
     border-radius: 20px;
-    border: solid 3px rgba(54, 162, 235, 1);
+    border: solid 1px rgb(88, 155, 199);
     background: white;
 }
 
+
+
+
+
+.chartCard {
+    width: 100%;
+    height: 700px;
+    background: rgba(54, 162, 235, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.chartBox {
+    width: 600px;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid 3px rgba(88, 155, 199);
+    background: white;
+}

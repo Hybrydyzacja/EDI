@@ -20,7 +20,8 @@
   
   <nav class="nav nav-pills justify-content-center">
     <a class="nav-link" href="indexFINAL.html">Tabela</a>
-    <a class="nav-link" href="chart.html">Wykresy</a>
+    <a class="nav-link" href="chart.html">Wykres słupkowy</a>
+    <a class="nav-link" href="secondchart.html">Wykres kołowy</a>
   </nav>
     <div class="chartMenu">
       <p>Rekord widzów</p>
@@ -32,52 +33,6 @@
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="apps.js"></script>
-    <script>
-    let mostViewersNumber = [];
-    let ChannelData = [];
-
-    async function drawChart(){
-        await apiData()
-
-         // setup 
-    const data = {
-      labels: ChannelData,
-      datasets: [{
-        label: 'Największa liczba widzów',
-        data: mostViewersNumber,
-        backgroundColor: [
-          'rgba(255, 26, 104, 0.2)',
-        ],
-        borderColor: [
-          'rgba(255, 26, 104, 1)',
-        ],
-        borderWidth: 1
-      }]
-    };
-
-    // config 
-    const config = {
-      type: 'bar',
-      data,
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    };
-
-    // render init block
-    const myChart = new Chart(
-      document.getElementById('myChart'),
-      config
-    );
-    }
-
-    drawChart()
-
-    </script>
 
   </body>
 </html>
