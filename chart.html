@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Projekt grupowy, Elektroniczna Wymiana Danych"> <!-- krótki opis strony -->
+    <meta name="author" content="Szczepan Bryczek, Wojtek Pich, Aleksandra Zięba"> <!-- autorzy strony -->
+    <title>EDI PROJEKT - wykresy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">  
+
+  </head>
+  <body>
+    <h1 class="text-center">STATYSTYKI ZE STREAMÓW</h1>
+  <div id="authors">
+    <link rel="stylesheet" href="style.css">
+    <h2 class="authors">Autorzy: </h2>
+    <p class="authors">Szczepan Bryczek, Wojtek Pich, Aleksandra Zięba</p>
+  </div>
+  
+  <nav class="nav nav-pills justify-content-center">
+    <a class="nav-link" href="indexFINAL.html">Tabela</a>
+    <a class="nav-link" href="chart.html">Wykresy</a>
+  </nav>
+    <div class="chartMenu">
+      <p>Rekord widzów</p>
+    </div>
+    <div class="chartCard">
+      <div class="chartBox">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="apps.js"></script>
+    <script>
+    let mostViewersNumber = [];
+    let ChannelData = [];
+
+    async function drawChart(){
+        await apiData()
+
+         // setup 
+    const data = {
+      labels: ChannelData,
+      datasets: [{
+        label: 'Największa liczba widzów',
+        data: mostViewersNumber,
+        backgroundColor: [
+          'rgba(255, 26, 104, 0.2)',
+        ],
+        borderColor: [
+          'rgba(255, 26, 104, 1)',
+        ],
+        borderWidth: 1
+      }]
+    };
+
+    // config 
+    const config = {
+      type: 'bar',
+      data,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    };
+
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+    }
+
+    drawChart()
+
+    </script>
+
+  </body>
+</html>
