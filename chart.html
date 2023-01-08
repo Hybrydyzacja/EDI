@@ -13,26 +13,25 @@
 
   <body>
     <h1 class="text-center">STATYSTYKI STREAMÓW NA PLATFORMIE GAME.TV</h1>
-  <div id="authors">
-    <link rel="stylesheet" href="style.css">
-    <h2 class="authors">Autorzy: </h2>
-    <p class="authors">Szczepan Bryczek, Wojtek Pich, Aleksandra Zięba</p>
-  </div>
+    <div id="authors">
+      <link rel="stylesheet" href="style.css">
+      <h2 class="authors">Autorzy: </h2>
+      <p class="authors">Szczepan Bryczek, Wojtek Pich, Aleksandra Zięba</p>
+    </div>
+    
   
   <nav class="nav nav-pills justify-content-center">
     <a class="nav-link" href="index.html">Tabela</a>
     <a class="nav-link" href="chart.html">Wykres słupkowy</a>
     <a class="nav-link" href="chart2.html">Wykres kołowy</a>
   </nav>
-    <div class="chartMenu">
-      <p>Rekord widzów</p>
-    </div>
     <div class="chartCardF">
       <div class="chartBoxF">
+        <h3 id="chartDescription">Wykres przedstawiający największą liczbę widzów na danym kanale</h3>
         <canvas id="myChart"></canvas>
       </div>
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script type="text/javascript" src="apps.js"></script>
+    <script type="text/javascript" src="chart.js"></script>
   </body>
 </html>

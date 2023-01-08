@@ -1,5 +1,5 @@
 async function apiData(){
-    const apiLink = 'http://192.168.0.73:2137/streamers.json';
+    const apiLink = 'https://my.api.mockaroo.com/streamers.json?key=e2947680';
 
     const response = await fetch(apiLink)
     const datapoints = await response.json()
@@ -26,8 +26,8 @@ async function drawChart(){
           label: 'Liczba kont',
           data: [count_true, count_false],
           backgroundColor: [
-            'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
+            'rgb(0, 0, 128)',
+            'rgb(169, 169, 169)',
           ],
           hoverOffset: 4
         }]

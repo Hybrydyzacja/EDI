@@ -1,5 +1,5 @@
 async function apiData(){
-    const apiLink = 'http://192.168.0.73:2137/streamers.json';
+    const apiLink = 'https://my.api.mockaroo.com/streamers.json?key=e2947680';
 
     const response = await fetch(apiLink)
     const datapoints = await response.json()
@@ -24,10 +24,10 @@ async function drawChart(){
         label: 'Największa liczba widzów',
         data: mostViewersNumber,
         backgroundColor: [
-          'rgba(255, 26, 104, 0.2)',
+          'rgba(0, 0, 128, 0.8)',
         ],
         borderColor: [
-          'rgba(255, 26, 104, 1)',
+          'rgba(0, 0, 0, 1)',
         ],
         borderWidth: 1
       }]
