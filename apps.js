@@ -11,11 +11,11 @@ async function apiData(){
     mostViewersNumber = mostviewers
 }
 
- let mostViewersNumber = [];
-    let ChannelData = [];
+let mostViewersNumber = [];
+let ChannelData = [];
 
-    async function drawChart(){
-        await apiData()
+async function drawChart(){
+    await apiData()
 
          // setup 
     const data = {

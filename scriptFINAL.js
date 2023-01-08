@@ -11,6 +11,7 @@ fetch("http://192.168.0.73:2137/streamers.json").then((apiData)=>{ //pobieramy d
         <td>${api.followers}</td>
         <td>${api.most_viewers}</td>
         <td>${api.last_time_live}</td>
+        <td>${api.verified}</td>
         </tr>`; //bez inkrementacji dostalibyśmy tylko dane z jednego obiektu, a chcemy dostać wszystkie
                 //następnie dodajemy komórki, które odnoszą się do wartości poszczególnych obiektów
     })

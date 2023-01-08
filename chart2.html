@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
-
   <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Projekt grupowy, Elektroniczna Wymiana Danych"> <!-- krótki opis strony -->
@@ -9,30 +9,31 @@
     <title>EDI PROJEKT - wykresy</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">  
-  </head>
 
+  </head>
   <body>
+
     <h1 class="text-center">STATYSTYKI STREAMÓW NA PLATFORMIE GAME.TV</h1>
   <div id="authors">
     <link rel="stylesheet" href="style.css">
     <h2 class="authors">Autorzy: </h2>
     <p class="authors">Szczepan Bryczek, Wojtek Pich, Aleksandra Zięba</p>
   </div>
-  
   <nav class="nav nav-pills justify-content-center">
-    <a class="nav-link" href="indexFINAL.html">Tabela</a>
+    <a class="nav-link" href="index.html">Tabela</a>
     <a class="nav-link" href="chart.html">Wykres słupkowy</a>
     <a class="nav-link" href="chart2.html">Wykres kołowy</a>
   </nav>
     <div class="chartMenu">
-      <p>Rekord widzów</p>
+      <p>Konta zweryfikowane i niezweryfikowane</p>
     </div>
-    <div class="chartCardF">
-      <div class="chartBoxF">
+    <div class="chartCard">
+      <div class="chartBox">
         <canvas id="myChart"></canvas>
       </div>
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script type="text/javascript" src="apps.js"></script>
+    <script type="text/javascript" src="chart2.js"></script>
+
   </body>
 </html>
