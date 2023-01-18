@@ -1,5 +1,7 @@
+var key = prompt("Please type API")
+
 async function apiData(){
-    const apiLink = 'https://my.api.mockaroo.com/streamers.json?key=e2947680';
+    const apiLink = 'https://my.api.mockaroo.com/streamers.json?key=' + key; // api key e2947680
 
     const response = await fetch(apiLink)
     const datapoints = await response.json()

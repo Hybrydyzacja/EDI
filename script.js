@@ -1,4 +1,7 @@
-fetch("https://my.api.mockaroo.com/streamers.json?key=e2947680").then((apiData)=>{ //pobieramy dane z api z linku i zapisujemy je do parametru apiData
+var key = prompt("Please type API")
+// api key e2947680
+
+fetch("https://my.api.mockaroo.com/streamers.json?key=" + key).then((apiData)=>{ //pobieramy dane z api z linku i zapisujemy je do parametru apiData
     return apiData.json(); //konwertujemy dane obiekty 
 }).then((objectData)=>{  //po tym możemy się już dalej odnosić do obiektów
     let tableData=""; //deklarujemy zmienną tableData, która jest na razie pusta
